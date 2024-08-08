@@ -12,17 +12,10 @@ def string_info(string):
 
 
 def is_contains(string, list_to_search):
-    string = str(string).lower()
-    list_to_search = list(list_to_search)
     count_calls()
-    for i in range(len(list_to_search)):
-        if str(list_to_search[i]).lower() == string:
-            result = True
-            break
-        else:
-            result = False
-            continue
-    return result
+    lower_string = string.lower()
+    lower_list = [item.lower() for item in list_to_search]
+    return lower_string in lower_list
 
 
 print(string_info("Taranis"))
